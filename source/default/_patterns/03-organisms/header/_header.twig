@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * header
+ *
+ * Available variables for header:
+ *  - header.variable_name [variable_type]: Description of the variable. Example below.
+ *  - header.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<header class="container-fluid site__header site-header bg-primary"
+        role="banner">
+  <div class="row justify-content-lg-center">
+    <div class="col-12 col-lg-11">
+
+      <section{{ attributes.addClass(classes) }}>
+
+        <nav class="navbar navbar-expand-lg text-white"
+          data-toggle="affix" data-offset="150">
+
+          {% block branding %}
+            {% include "@atoms/branding/_branding.twig" with {
+              url: '#',
+              logo_svg_inline: '@atoms/branding/hcrc-logo.svg',
+              site_name: 'Housing Crisis Research Collaborative',
+              site_slogan: 'Site Slogan that Describes the Logo Above with Inline SVG'
+            } %}
+          {% endblock branding %}
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#block-particle-mainnavigation"
+                  aria-controls="block-particle-mainnavigation"
+                  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon fa fa-bars"></span>
+          </button>
+
+          {% block navbar %}
+            <div
+              class="collapse navbar-collapse justify-content-lg-end align-self-lg-end"
+              id="block-particle-mainnavigation">
+              {% include '@molecules/nav/_nav.twig' with {
+                nav_alignment: 'end',
+                nav_item_link_other_classes: ['text-white'],
+                nav_other_classes: 'mb-2',
+              } %}
+            </div>
+          {% endblock navbar %}
+
+        </nav>
+
+      </section>
+
+    </div>
+  </div>
+
+</header>

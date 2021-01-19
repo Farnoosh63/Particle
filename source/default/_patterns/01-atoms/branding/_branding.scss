@@ -1,0 +1,21 @@
+//@use 'sass:map';
+@use '~tokens/sass/utils';
+@import '../../../tokens/sass/libraries/bootstrap/index';
+
+.branding {
+
+  &__site-logo {
+
+    svg {
+
+      width: 150px;
+      height: 80px;
+
+      @include media-breakpoint-up(md) {
+        width: 258px;
+        height: 169px;
+      }
+
+    }
+  }
+}

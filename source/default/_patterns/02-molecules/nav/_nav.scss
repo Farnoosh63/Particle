@@ -1,0 +1,13 @@
+// Just a demo
+@use '~tokens/sass/utils';
+
+.nav {
+  &--border {
+    border-color: utils.bs-theme-color('light');
+    border-style: solid;
+  }
+}
+
+.fa-bars {
+  color: utils.bs-theme-color('white');
+}

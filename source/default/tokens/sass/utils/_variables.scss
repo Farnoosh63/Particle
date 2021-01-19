@@ -1,0 +1,49 @@
+////
+/// Custom variables
+/// Non-framework variables unique to your project
+///
+/// @group variables
+////
+
+///
+/// Colors
+///
+
+/// Colors
+/// Base color values are for reference. Use directly from maps in code.
+/// @group variables:colors
+$colors: (
+  'dark-green': #094C6A,
+  'yellow': #F7C44F,
+  'green': #358193,
+  'light-gray': #9AA3B0,
+  'medium-gray': #A1A0A0,
+  'white': #fff,
+  'black': #000,
+);
+
+///
+/// Typography
+///
+
+/// Typography: Font families
+/// Note: #{} used because we need a string WITHOUT quote symbols
+/// @group variables:typography
+$font-families: (
+  lato: #{'LatoRegular, sans-serif'},
+  //sans: #{'Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif'},
+  //monospace: #{'Source Code Pro, Courier New, monospace'},
+  //serif: #{'Oswald, Times New Roman, serif'},
+);
+
+/// Typography: Line spacings
+/// @group variables:typography
+$letter-spacings: (
+  'reduce': -1px,
+  'base': normal,
+  'increase': 1px,
+);
+
+/// Typography: Weights
+/// @group variables:typography
+$font-weights: ();

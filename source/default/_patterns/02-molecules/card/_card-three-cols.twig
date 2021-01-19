@@ -1,0 +1,76 @@
+{% set card_classes = [
+  'card',
+  'container-fluid',
+  text_alignment ? 'text-' ~ text_alignment,
+  text_color ? 'text-' ~ text_color,
+  card_background ? 'bg-' ~ card_background,
+  card_border ? 'border-' ~ card_border,
+  card_other_classes,
+] | sort | join(' ') | trim %}
+
+<div class="{{ card_classes }}">
+  <div class="container">
+    <h1 class="card__title font-weight-light text-uppercase">
+      Collabortaive research and insights
+    </h1>
+    <h5 class="card__subtitle">
+      Research by the Collaborative is led by the following:
+    </h5>
+    <h3 class="font-weight-bold">
+         <span>
+            {% if svg %}
+              {% include '@atoms/svg/_svg.twig' with {
+                svg: {
+                  svgpath: '@atoms/svg/svg/person.svg',
+                  colorOriginal: true,
+                }
+              } %}
+            {% else %}
+              {% include "@atoms/image/_image.twig" with {
+                image: {
+                  variant: 'primary',
+                  src: paths.images ~'/research-brief.png'
+                },
+                image_classes: ['d-inline']
+              } %}
+            {% endif %}
+          </span>
+      Research Briefs
+    </h3>
+    <div class="row">
+      <div class="col-12 col-lg-4 my-4">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+      <div class="col-12 col-lg-4 my-5">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+      <div class="col-12 col-lg-4 my-5">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+
+      <div class="col-12 col-lg-4 my-5">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+      <div class="col-12 col-lg-4 my-5">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+      <div class="col-12 col-lg-4 my-5">
+        <h5>Title of Research Brief  </h5>
+        <h5>Will Appear Here</h5>
+        <button href="#" class="border-black py-1 px-3">View Report</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

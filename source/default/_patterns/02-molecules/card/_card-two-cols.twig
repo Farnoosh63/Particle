@@ -1,0 +1,68 @@
+{% set card_classes = [
+  'card',
+  'container-fluid',
+  text_alignment ? 'text-' ~ text_alignment,
+  text_color ? 'text-' ~ text_color,
+  card_background ? 'bg-' ~ card_background,
+  card_border ? 'border-' ~ card_border,
+  card_other_classes,
+] | sort | join(' ') | trim %}
+
+<div class="{{ card_classes }}">
+  <div class="container">
+    <h1 class="card__title font-weight-light text-white text-uppercase">
+      Core Research Partners
+    </h1>
+    <h5 class="card__subtitle">
+      Research by the Collaborative is led by the following:
+    </h5>
+    <div class="row">
+      <div class="col-12 col-lg-6 my-5">
+        <h5 class="font-weight-bold"> NYU Furman Center for Real Estate and
+          Urban Policy</h5>
+        <p>The NYU Furman Center for Real Estate and Urban Policy advances
+          research and debate on housing, neighborhoods, and urban policy.
+          Established in 1995, it is a joint center of the New York University
+          School of Law and the Robert F. Wagner Graduate School of Public
+          Service. Its mission is to conduct objective academic and empirical
+          research, promote frank and productive discussions, present essential
+          data and analysis, and train the next generation of urban policy
+          leaders.</p>
+
+        <h5 class="font-weight-bold"> Terner Center for Housing Innovation at
+          the University of California, Berkeley</h5>
+        <p>The Terner Center for Housing Innovation at the University of
+          California, Berkeley is a collaboration between the College of
+          Environmental Design and the Haas School of Business. The Terner
+          Center
+          leverages applied research and best practices to inform and advance
+          innovation in the planning, financing, design, and development of the
+          built environment.</p>
+      </div>
+
+      <div class="col-12 col-lg-6 my-5">
+        <h5 class="font-weight-bold">Urban Institute</h5>
+        </p>The Urban Institute produces timely data and analysis that help
+        advance opportunity, dismantle structural racism, and achieve economic
+        mobility for everyone. From C-suite executives to community activists,
+        we
+        are a trusted source for facts and evidence that have the power to
+        improve
+        the wellbeing of people and places and move our society toward greater
+        equity.</p>
+        <h5 class="font-weight-bold"> Harvard Joint Center for Housing Studies</h5>
+        <p>The Harvard Joint Center for Housing Studies advances understanding
+          of
+          housing issues and informs policy. Through its research, education,
+          and
+          public outreach programs, the Center helps leaders in government,
+          business, and the civic sectors make decisions that effectively
+          address
+          the needs of cities and communities. Through graduate and executive
+          courses, as well as fellowships and internship opportunities, the
+          Center
+          also trains and inspires the next generation of housing leaders.</p>
+      </div>
+    </div>
+  </div>
+</div>

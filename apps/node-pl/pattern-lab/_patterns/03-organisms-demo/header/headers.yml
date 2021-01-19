@@ -1,0 +1,18 @@
+header:
+  example_var: This is an example var
+
+header_demo_block:
+  title: header Component
+  text:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>
+navs_helper: Documentation and examples for how to use Bootstrap's included navigation components.
+
+nav_items:
+  - nav_item_text: Insights
+  - nav_item_text: Collaboration
+  - nav_item_text: Network
+  - nav_item_text: Partners
+  - nav_item_text: About
+
+

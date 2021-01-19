@@ -1,0 +1,46 @@
+{#
+/**
+ * @file Footer!
+ *
+ * Available variables:
+ * - footer.slogan: [string]: A handy slogan to display.
+ */
+#}
+
+<footer class="container-fluid p-3 bg-light-gray" role="contentinfo">
+  <div class="row">
+    <div class="container footer">
+
+      <div class="row ustify-content-lg-betweenj align-items-center no-gutters">
+
+        {% block footer %}
+          <section
+            class="col-12 col-md-8 col-lg-6 d-flex justify-content-lg-start footer__logo flex-shrink-1">
+            {% block branding %}
+              {% include "@atoms/branding/_branding.twig" with {
+                url: '#',
+                logo_svg_inline: '@atoms/branding/hcrc-logo-bw.svg',
+                site_name: 'Housing Crisis Research Collaborative',
+              } %}
+            {% endblock branding %}
+          </section>
+
+          <section
+            class="col-lg-6 d-none d-lg-flex justify-content-start justify-content-lg-end footer__text">
+            {% block footer_menu %}
+              {% include '@molecules/nav/_nav.twig' with {
+                nav_alignment: 'end',
+                nav_item_link_other_classes: ['text-white', 'border-right'],
+              } %}
+              <div class="copyright text-white px-3 py-2">Copyright
+                &copy; {{ "now"|date("Y") }} </div>
+            {% endblock footer_menu %}
+          </section>
+
+        {% endblock footer %}
+
+      </div>
+
+    </div>
+  </div>
+</footer>
